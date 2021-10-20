@@ -2,6 +2,7 @@ package com.example.springbootexternalizeconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,10 +34,18 @@ public class GreetingController {
     private Map<String, String> dbValues;
 
     @Autowired
+    private Environment environment;
+
+    @Autowired
     private DbSettings dbSettings;
 
     @GetMapping("greeting")
     public String greeting() {
         return dbSettings.getHost() + dbSettings.getPort();
+    }
+
+    @GetMapping("envDetails")
+    public String envDetails() {
+        return environment.toString();
     }
 }
