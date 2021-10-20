@@ -1,3 +1,6 @@
+#Naming convention for profile name
+#application-<profileName>.extn
+
 my.greeting: Hello I am Amimul Ehsan
 app.name: My app
 app.desc: Welcome to ${app.name}
@@ -7,7 +10,7 @@ dbValues: "{connectionString: 'http://__', userName: 'foo' , password: 'pass' }"
 
 db:
   host: 127.0.0.1
-  port: 3367
+  port: 2400
 
 #Nesting is the true power of YAML . (Yet another markup language)
 management:
@@ -15,8 +18,3 @@ management:
     web:
       exposure:
         include: "*"
-
-
-spring:
-  profiles:
-    active: test

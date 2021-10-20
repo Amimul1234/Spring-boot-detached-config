@@ -37,6 +37,6 @@ public class GreetingController {
 
     @GetMapping("greeting")
     public String greeting() {
-        return dbSettings.getHost();
+        return dbSettings.getHost() + dbSettings.getPort();
     }
 }
