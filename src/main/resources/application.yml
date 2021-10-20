@@ -1,0 +1,17 @@
+my.greeting: Hello I am Amimul Ehsan
+app.name: My app
+app.desc: Welcome to ${app.name}
+my.list.values: One,Two,Three
+
+dbValues: "{connectionString: 'http://__', userName: 'foo' , password: 'pass' }"
+
+db:
+  host: 127.0.0.1
+  port: 3367
+
+#Nesting is the true power of YAML . (Yet another markup language)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
