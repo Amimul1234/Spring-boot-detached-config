@@ -8,7 +8,7 @@ my.list.values: One,Two,Three
 dbValues: "{connectionString: 'http://__', userName: 'foo' , password: 'pass' }"
 
 db:
-  host: 127.0.0.1
+  host: blah
   port: 3367
 
 #Nesting is the true power of YAML . (Yet another markup language)
@@ -22,6 +22,12 @@ spring:
   profiles:
     active: test
 
+  cloud:
+    config:
+      uri: http://localhost:8080
+
 #  Default profile is always selected. And the another profile is placed at the top of it
 # java -jar <Project Name> --spring.profiles.active=test
+server:
+  port: 8686
 #  To make environment specific profiles
